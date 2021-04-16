@@ -1,0 +1,256 @@
+// Imports
+
+// Colors
+@import 'colors';
+
+// Fonts
+@import 'fonts';
+
+// Buttons
+@import 'buttons';
+
+// Utilities
+@import 'utilities';
+
+// Variables
+@import 'variables';
+
+// Body
+body {
+    background-color: $dark-color;
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Text utilites
+.sub-text {
+    margin-left: 3px;
+    font-size: 10px;
+}
+
+// Content
+main {
+    .content {
+        background-color: $secondary-color;
+        border-top-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+    }
+}
+
+/*
+ * Sidebar
+ */
+
+ .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    border-right: 3px dashed $secondary-color;
+    /* Behind the navbar */
+    padding: 48px 0 0;
+    /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+
+    .sidebar-sticky {
+        position: relative;
+        top: 0;
+        height: calc(100vh - 48px);
+        padding-top: .5rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        // Navbar
+        /* Scrollable contents if viewport is shorter than content. */
+        .nav-item {
+            .nav-link {
+                font-weight: 500;
+                font-size: 1em;
+                padding: .5rem 1rem;
+                color: $text-primary-color;
+
+                i {
+                    font-size: 1.4em !important;
+                }
+
+                .feather {
+                    margin-right: 4px;
+                    color: $secondary-color;
+                }
+            }
+
+            .nav-link.active {
+                background-color: $secondary-color;
+            }
+
+            transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        }
+
+        .nav-item:hover {
+            border-left: 5px solid $primary-color;
+        }
+    }
+
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+        .sidebar-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+        }
+    }
+}
+
+// Form
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: $primary-color;
+    box-shadow: 2px 2px 2.1px $primary-color;
+    background-color: $dark-color;
+    outline: 0 none;
+}
+
+
+@mixin placeholder($color) {
+    -webkit-transform: $color;
+    -ms-transform: $color;
+    transform: $color;
+}
+
+input:focus {
+    @include placeholder($text-secondary-color);
+}
+
+.card {
+    background-color: $dark-color;
+}
+
+.modal-content {
+    background-color: $secondary-color;
+}
+
+// Cards
+// Card-items
+.card-items {
+    @include card(100%, auto, 0, none, none, $card-box-shadow);
+    border-top-right-radius: 0.30em !important;
+    border-bottom-left-radius: 0.30em !important;
+}
+
+// Primary card
+.card-items-primary {
+    @include linearGradient($primary-color, $primary-linear-gradient);
+
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.card-items-primary:hover {
+    transform: scale(1.1);
+}
+
+// Secondary card
+.card-items-secondary {
+    @include linearGradient($secondary-color, $secondary-linear-gradient);
+    border: none;
+    border-radius: 0.5rem;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.card-items-secondary:hover {
+    transform: scale(1.1);
+}
+
+// Tertiary card
+.card-items-tertiary {
+    @include linearGradient($tertiary-color, $tertiary-linear-gradient);
+    border: none;
+    border-radius: 0.5rem;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.card-items-tertiary:hover {
+    transform: scale(1.1);
+}
+
+// Quartinary card
+.card-items-quartinary {
+    @include linearGradient($quartinary-color, $quartinary-linear-gradient);
+    border: none;
+    border-radius: 0.5rem;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.card-items-quartinary:hover {
+    transform: scale(1.1);
+}
+
+// Quinary card
+.card-items-quinary {
+    @include linearGradient($quinary-color, $quinary-linear-gradient);
+    border: none;
+    border-radius: 0.5rem;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.card-items-quinary:hover {
+    transform: scale(1.1);
+}
+
+
+// Card flip
+.card-flip {
+    perspective: 1000px;
+    width: 100%;
+
+    &:hover {
+        .flip {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.card-flip.hover {
+    .flip {
+        transform: rotateY(180deg);
+
+    }
+}
+
+.front {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+.back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: auto;
+}

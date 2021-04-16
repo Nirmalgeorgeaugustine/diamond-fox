@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFX - dashboard</title>
+
+    <!-- Css references -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom style references -->
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://kit.fontawesome.com/0905b705bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+
+
+</head>
+
+<body>
+
+    <!-- Main -->
+    <main>
+        <section class="dashboard">
+            <div class="row">
+                <!-- Side bar -->
+                <nav class="col-md-2 d-none d-md-block bg-transparent sidebar">
+                    <div class="profile-container d-flex flex-column align-items-center justify-content-center">
+                        <div class="title">
+                            <h3 class="text-white">Wallet</h3>
+                        </div>
+                        <div class="profile">
+                            <img src="./assets//images/img.png" alt="profile">
+                        </div>
+                        <div class="profile-name">
+                            <h3>Ghulam</h3>
+                        </div>
+                        <div class="designation text-muted">
+                            <h6>Product Designer</h6>
+                        </div>
+                    </div>
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active pl-3  pb-2" href="dashboard.html">
+                                    <span><i class="fas fa-chart-area pr-2"></i></span>
+                                    Dashboard <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-3  pb-2" href="home.html">
+                                    <span><i class="fas fa-home pr-2"></i></span>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-3  pb-2" href="about.html">
+                                    <span><i class="fas fa-info-circle pr-2"></i></span>
+                                    &nbsp;About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-3  pb-2" href="#">
+                                    <span><i class="fas fa-tools pr-2"></i></span>
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-3  pb-2" href="#">
+                                    <span><i class="fas fa-user-check pr-2"></i></span>
+                                    Clients
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-3  pb-2" href="#">
+                                    <span><i class="fas fa-handshake pr-2"></i></span>
+                                    Testimonials
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-3  pb-2" href="#">
+                                    <span><i class="fas fa-cog pr-2"></i></span>
+                                    &nbsp;Settings
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pl-3  pb-2" href="#">
+                                    <span><i class="fas fa-layer-group pr-2"></i></span>
+                                    Components
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
+                    <nav class="navbar navbar-dark bg-transparent">
+                        <a class="navbar-brand" href="#">
+                            Why Choose Us
+                        </a>
+                    </nav>
+                    <section class=" p-2">
+                        <div class="card content p-2 d-flex justify-content-between flex-column p-4">
+                            <div class="section-title">
+                                <h3 class="text-white">Dashboard</h3>
+                            </div>
+                            <div class="card-container my-md-5">
+                                <div class="row ">
+                                    <div class="col-md-3">
+                                        <div
+                                            class="card posts-report-card generic-report-card d-flex justify-content-between flex-column p-3">
+                                            <div class="dashboard-icon d-flex justify-content-between">
+                                                <div class="icon mb-2 posts-icon-bg"><i class="fas fa-clone"></i></div>
+                                                <a href="#"><i class="fas fa-ellipsis-v text-light"></i> </a>
+                                            </div>
+                                            <div class="dashboard-price">
+                                                <h1 class="text-white">136<span class="sub-text text-muted">posts</span>
+                                                </h1>
+
+                                            </div>
+                                            <div class="dashboard-week">
+                                                <p class="text-white">45% <span class="sub-text text-muted">this
+                                                        week</span> <i class="pl-2 fas fa-arrow-up text-success"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div
+                                            class="card views-report-card generic-report-card d-flex justify-content-between flex-column p-3">
+                                            <div class="dashboard-icon d-flex justify-content-between">
+                                                <div class="icon mb-2 views-icon-bg"><i class="fas fa-eye "></i></div>
+                                                <a href="#"><i class="fas fa-ellipsis-v text-light"></i> </a>
+                                            </div>
+                                            <div class="dashboard-price">
+                                                <h1 class="text-white">259<span class="sub-text text-muted">views</span>
+                                                </h1>
+
+                                            </div>
+                                            <div class="dashboard-week">
+                                                <p class="text-white">-45% <span class="sub-text text-muted">this
+                                                        week</span> <i class="pl-2 fas fa-arrow-down text-danger"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div
+                                            class="card comments-report-card  generic-report-card d-flex justify-content-between flex-column p-3 bg-dark">
+                                            <div class="dashboard-icon d-flex justify-content-between">
+                                                <div class="icon mb-2 comments-icon-bg"><i class="fas fa-comments "></i>
+                                                </div>
+                                                <a href="#"><i class="fas fa-ellipsis-v text-light"></i> </a>
+                                            </div>
+                                            <div class="dashboard-price">
+                                                <h1 class="text-white">32<span
+                                                        class="sub-text text-muted">comments</span></h1>
+
+                                            </div>
+                                            <div class="dashboard-week">
+                                                <p class="text-white">15% <span class="sub-text text-muted">this
+                                                        week</span> <i class="pl-2 fas fa-arrow-up text-success"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div
+                                            class="card pages-report-card generic-report-card d-flex justify-content-between flex-column p-3 bg-dark">
+                                            <div class="dashboard-icon d-flex justify-content-between">
+                                                <div class="icon pages-icon-bg mb-2"><i class="fas fa-pager "></i></div>
+                                                <a href="#"><i class="fas fa-ellipsis-v text-light"></i> </a>
+                                            </div>
+                                            <div class="dashboard-price">
+                                                <h1 class="text-white">28<span class="sub-text text-muted">pages</span>
+                                                </h1>
+
+                                            </div>
+                                            <div class="dashboard-week">
+                                                <p class="text-white">15% <span class="sub-text text-muted">this
+                                                        week</span> <i class="pl-2 fas fa-arrow-up text-success"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="graph-container my-md-4">
+                                <div class="row">
+                                    <div class="col-md-5 d-flex flex-column justify-content-between">
+                                        <div class="dropdown show custom-dropdown">
+                                            <a class="btn btn-secondary dropdown-toggle bg-transparent text-left w-100"
+                                                href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Dropdown link
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="statistic-content"> -->
+                                        <div class="row views">
+                                            <div class="col-md-6 total-views d-flex flex-column text-white">
+                                                <div class="title ">
+                                                    <h3>Total Views</h3>
+                                                </div>
+                                                <div class="numbers">
+                                                    <h1>452332</h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 monthly-increase d-flex flex-column text-white">
+                                                <div class="title ">
+                                                    <h3>Monthly Increase</h3>
+                                                </div>
+                                                <div class="numbers">
+                                                    <h1>11332</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row posts">
+                                            <div class="col-md-6 posts-made d-flex flex-column text-white">
+                                                <div class="title ">
+                                                    <h3>Posts Made</h3>
+                                                </div>
+                                                <div class="numbers">
+                                                    <h1>67</h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 avg-post-views d-flex flex-column text-white">
+                                                <div class="title ">
+                                                    <h3>Avg Post Views</h3>
+                                                </div>
+                                                <div class="numbers">
+                                                    <h1>2345</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row comments">
+                                            <div class="col-md-6 total-comments d-flex flex-column text-white">
+                                                <div class="title">
+                                                    <h3>Total Comments</h3>
+                                                </div>
+                                                <div class="numbers">
+                                                    <h1>135</h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 posts-referred d-flex flex-column text-white">
+                                                <div class="title ">
+                                                    <h3>Post-reffered</h3>
+                                                </div>
+                                                <div class="numbers">
+                                                    <h1>456</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- </div> -->
+
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="chat-section p-2">
+                                            <canvas id="myChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rankings-container text-white">
+                                <div class="row">
+                                    <div
+                                        class="col-md-6 p-3 d-flex flex-column justify-content-between dashboard-table table-hover">
+                                        <div class="ranking-title">
+                                            <h5>Popular comments</h5>
+                                        </div>
+                                        <div class="ranking-content">
+                                            <table class="table table-responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Rank</th>
+                                                        <th scope="col">User</th>
+                                                        <th scope="col">Comment</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row " class="text-center">1</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>new chapter:lee book and new management chapter and goals
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="text-center">2</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                            amet ut anim tempor in fugiat aute.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row " class="text-center">3</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="text-center">4</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="text-center">5</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row " class="text-center">6</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-md-6 p-3 d-flex flex-column justify-content-between dashboard-table table-hover">
+                                        <div class="ranking-title">
+                                            <h5>Post Rankings</h5>
+                                        </div>
+                                        <div class="ranking-content">
+                                            <table class="table table-responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Rank</th>
+                                                        <th scope="col">Post</th>
+                                                        <th scope="col">Title</th>
+                                                        <th scope="col">Views</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row " class="text-center">1</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>new chapter:lee book and new management chapter and goals
+                                                        </td>
+                                                        <td>3433</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="text-center">2</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                            amet ut anim tempor in fugiat aute.</td>
+                                                        <td>4564</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row " class="text-center">3</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                        <td>5643</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="text-center">4</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                        <td>5643</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="text-center">5</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                        <td>5643</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row " class="text-center">6</th>
+                                                        <td><img src="./assets/images/img.png" alt=""
+                                                                style="height:2.5em ;width:2.5em;border-radius: 0.2em;"></img>
+                                                        </td>
+                                                        <td>Anim eiusmod nulla mollit dolor reprehenderit velit commodo
+                                                        </td>
+                                                        <td>5643</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+    <!-- JS references -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./js/chartStyle.js">
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#table').DataTable();
+        });
+    </script>
+</body>
+
+</html>

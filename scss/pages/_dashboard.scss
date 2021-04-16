@@ -1,0 +1,138 @@
+
+// Dashboard
+.dashboard {
+    width: 100%;
+    height: 100%;
+
+    .profile-container {
+        height: 40%;
+
+        .title {
+            padding-bottom: 1em;
+
+            h3 {
+                font-size: 2.1em;
+                font-weight: bolder;
+            }
+        }
+
+        .profile {
+            height: 30%;
+            width: 30%;
+            margin-bottom: 0.7em;
+
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .profile-name {
+            h3 {
+                color: white;
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+        }
+    }
+
+    main {
+        .content {
+            background-color: $secondary-color;
+            border-radius: 1em;
+
+            .dashboard-icon {
+                .icon {
+                    padding: 0.17em 0.4em;
+                    border-radius: 0.4rem;
+                }
+
+                .pages-icon-bg {
+                    background-color: $primary-icon-background;
+                }
+
+                .comments-icon-bg {
+                    background-color: $tertiary-icon-background;
+                }
+
+                .views-icon-bg {
+                    background-color: $secondary-icon-background;
+                }
+
+                .posts-icon-bg {
+                    background-color: $quartinary-icon-background;
+                }
+            }
+
+            .generic-report-card {
+                @include linearGradient($primary-color, $primary-linear-gradient);
+                @include card(100%, auto, 1em, none, none, $card-box-shadow);
+            }
+
+            .posts-report-card {
+                @include linearGradient($primary-color, $quartinary-linear-gradient);
+            }
+
+            .comments-report-card {
+                @include linearGradient($primary-color, $tertiary-linear-gradient);
+            }
+
+            .pages-report-card {
+                @include linearGradient($primary-color, $primary-linear-gradient);
+            }
+
+            .views-report-card {
+                @include linearGradient($primary-color, $secondary-linear-gradient);
+            }
+
+        }
+    }
+}
+
+
+
+.graph-container {
+    .title {
+        h3 {
+            font-size: 0.9rem;
+        }
+    }
+
+    .numbers {
+        h1 {
+            font-size: 1.6rem;
+        }
+    }
+
+    .dropdown-menu {
+        @include linearGradient($primary-color, $primary-linear-gradient);
+
+        a {
+            color: #fff;
+        }
+
+        .dropdown-item:hover {
+            background-color: $dark-color;
+            color: #fff;
+        }
+    }
+}
+
+.rankings-container {
+    //comment table 
+    .dashboard-table {
+
+        //ranking content
+        .ranking-content {
+            .table thead th {
+                border: 1px solid $dark-color !important;
+            }
+
+            .table td,
+            .table th {
+                border: 1px solid $dark-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+// Card
+@mixin card($width, $height, $border-radius, $border, $outline, $box-shadow) {
+    width: $width;
+    height: $height;
+    border-radius: $border-radius;
+    border: $border;
+    outline: $outline;
+    box-shadow: $box-shadow;
+}

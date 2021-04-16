@@ -1,0 +1,37 @@
+// Layout
+// Row
+.row {
+    margin: 0 !important;
+}
+
+@mixin zero-padding($padding) {
+    padding: $padding !important;
+}
+
+@mixin col-cust($size) {
+    width: $size !important;
+    flex: 0 0 $size !important;
+    max-width: $size !important;
+}
+
+// Col
+// @for $i from 1 through 12 {
+//     .col-md-#{$i}{
+//         @include zero-padding(0);
+//     }
+
+//     .col-sm-#{$i} {
+//         @include zero-padding(0);
+//     }
+
+//     .col-lg-#{$i} {
+//         @include zero-padding(0);   
+//     }
+// }
+
+// .cust-col-10 {
+//     @include col-cust(82%);
+// }
+// .cust-col-2 {
+//     @include col-cust(18%);
+// }
